@@ -1,0 +1,208 @@
+/target/
+__pycache__/
+*.log
+
+# ============================================================
+# Deep Lantern - .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# Build directories
+# ------------------------------------------------------------
+build/
+build-*/
+cmake-build-*/
+out/
+dist/
+bin/
+obj/
+
+# ------------------------------------------------------------
+# CMake
+# ------------------------------------------------------------
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+Makefile
+CTestTestfile.cmake
+compile_commands.json
+_deps/
+
+# ------------------------------------------------------------
+# Compiled binaries / object files
+# ------------------------------------------------------------
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Debug / symbol files
+*.pdb
+*.ilk
+*.dSYM/
+*.dSYM.zip
+
+# ------------------------------------------------------------
+# Python
+# Used by tooling / lichess-bot integration
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+env/
+ENV/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ------------------------------------------------------------
+# Local configuration / credentials
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+config.local.yml
+config.local.yaml
+config.local.json
+
+# Never commit Lichess API tokens or private bot configs
+lichess-token.txt
+token.txt
+secrets/
+*.secret
+
+# If config.yml contains your Lichess token, keep it local.
+config.yml
+config.yaml
+
+# Example/template configs should still be committed
+!config.example.yml
+!config.example.yaml
+
+# ------------------------------------------------------------
+# Opening books / large engine data
+# ------------------------------------------------------------
+# Keep large Polyglot books out of Git by default.
+*.bin
+*.book
+*.polyglot
+
+books/
+opening-books/
+
+# If you intentionally want a small book committed, use:
+# !books/my-book.bin
+
+# ------------------------------------------------------------
+# Engine-generated files
+# ------------------------------------------------------------
+*.log
+logs/
+
+*.tmp
+*.temp
+*.cache
+
+*.pid
+*.lock
+
+# Chess engine test / analysis output
+bench-results/
+test-results/
+analysis-output/
+selfplay/
+games/
+*.pgn
+
+# ------------------------------------------------------------
+# macOS
+# ------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ------------------------------------------------------------
+# Windows
+# ------------------------------------------------------------
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------
+# Linux
+# ------------------------------------------------------------
+*~
+.directory
+
+# ------------------------------------------------------------
+# Visual Studio
+# ------------------------------------------------------------
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ------------------------------------------------------------
+# VS Code
+# ------------------------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+
+# ------------------------------------------------------------
+# JetBrains / CLion
+# ------------------------------------------------------------
+.idea/
+*.iml
+
+# ------------------------------------------------------------
+# Vim / editors
+# ------------------------------------------------------------
+*.swp
+*.swo
+*.swn
+
+# ------------------------------------------------------------
+# Temporary / backup files
+# ------------------------------------------------------------
+*.bak
+*.orig
+*.rej
+*.old
+*.save
+
+# ------------------------------------------------------------
+# Profiling / performance output
+# ------------------------------------------------------------
+*.prof
+*.profraw
+*.profdata
+gmon.out
+perf.data
+perf.data.old
+
+# ------------------------------------------------------------
+# Sanitizer / crash output
+# ------------------------------------------------------------
+core
+core.*
+vgcore.*
+crash/

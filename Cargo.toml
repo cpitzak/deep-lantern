@@ -1,0 +1,22 @@
+[package]
+name = "deep-lantern"
+version = "0.2.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Portable bitboard UCI chess engine"
+
+[lib]
+name = "deep_lantern"
+
+[[bin]]
+name = "deep-lantern"
+path = "src/main.rs"
+
+[profile.release]
+lto = false
+codegen-units = 1
+
+[profile.dev.build-override]
+opt-level = 3
+[profile.release.build-override]
+opt-level = 3
